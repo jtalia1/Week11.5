@@ -128,7 +128,8 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Character.cpp" />
-    <ClCompile Include="StoneJennaWeek11.5.cpp" />
+    <ClCompile Include="StoneJennaWeek11.5Part1.cpp" />
+    <ClCompile Include="StoneJennaWeek11.5Part2.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Character.h" />
