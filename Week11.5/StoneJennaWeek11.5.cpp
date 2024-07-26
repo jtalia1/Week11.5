@@ -23,9 +23,9 @@ int main() {
         cout << "Testing character function with 'z' and offset 26..." << endl;
         cout << "Result: " << character('z', 26) << endl; // Expected: 'z'
 
-        // This should throw an exception since '1' is not a valid start character
-        cout << "Testing character function with '1' and offset 3..." << endl;
-        cout << "Result: " << character('1', 3) << endl;
+        cout << "Testing character function with 'A' and offset 32..." << endl;
+        // This should throw an exception due to case transition
+        cout << "Result: " << character('A', 32) << endl;
     }
     catch (const invalidCharacterException& e) {
         // Handle the case where the start character is invalid
