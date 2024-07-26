@@ -8,14 +8,14 @@
 
 using namespace std;
 
-// Calculate the character after applying the offset
+// Function to calculate the character after applying the offset
 char character(char start, int offset) {
-    // Ensure start character is a valid letter
+    // Ensure the start character is a valid letter
     if (!isalpha(start)) {
         throw invalidCharacterException("Oops! The start character isn't a letter.");
     }
 
-    // Determine if start character is lowercase or uppercase
+    // Determine if the start character is lowercase or uppercase
     char base = islower(start) ? 'a' : 'A';
 
     // Calculate new position of the character in the alphabet
@@ -29,9 +29,9 @@ char character(char start, int offset) {
     // Calculate resulting character
     char result = base + newChar;
 
-    // Make sure the result is a valid letter
-    if (!isalpha(result)) {
-        throw invalidRangeException("Hmm, the resulting character isn't a letter.");
+    // Check if resulting character is in the same case as the start character
+    if ((islower(start) && isupper(result)) || (isupper(start) && islower(result))) {
+        throw invalidRangeException("Oops! The resulting character is in a different case.");
     }
 
     return result;
